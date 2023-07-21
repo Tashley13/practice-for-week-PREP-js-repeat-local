@@ -103,18 +103,38 @@ function goodbye(name) {
 };
 
 function isFive(num) {
+    if (num===5) {
+        return true
+    }
+    else {
+    return false
+    }
     /* Takes in a number, num, and returns `true` if a number is equal to 5 and
     `false` if it is not. */
     // Your code here
 };
 
 function isOdd(num) {
+    if (num%2!==0) {
+        return true
+    }
+    else {return false
+    }
     /* Takes in a number and returns `true` if the number is odd and returns
     `false` otherwise. Try writing this with and without `if` statements */
     // Your code here
 };
 
 function isSubString(searchString, subString) {
+    let str1=searchString.toLowerCase();
+    let str2=subString.toLowerCase();
+    let str3=str1.includes(str2);
+    if(str3==true) {
+        return true
+    }
+    else {
+        return false
+    }
     /* Takes in two strings, `searchString` and `subString`. Should return
     `true` if `subString` is a part of the`searchString`, regardless of upper
     or lower case, and `false` if otherwise. */
@@ -122,6 +142,14 @@ function isSubString(searchString, subString) {
 };
 
 function aCounter(word) {
+    let count=0;
+    for (let i=0; i<word.length; i++);
+    let char=word[index];
+    if (char === "a" || char ==="A") {
+        count =+1;
+    }
+    return count
+
     /* Takes in a word and returns the number of a's within that word. Counts
     both lowercase (a) and uppercase (A). Your job is to translate the following
     function to use a `for` loop instead of the `while` loop it is currently
