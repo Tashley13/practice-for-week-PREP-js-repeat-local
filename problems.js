@@ -29,15 +29,20 @@ function doubler(nums) {
 /*starting at 0 in the array, as long as the index is in the length of the array
 /* (it only uses the values present), we will go down the line until the end)*/
         let num1=nums[i];
+/*set num1 to be the input of nums*/
         let num2=num1*2;
         doubNum=doubNum.concat(num2);}
+/*concat does not change original array*/
     }
+    return doubNum;
     /* Takes an array of numbers and returns a new array where every element of
     the original array is multiplied by 2. */
     // Your code here
 };
 
 function combineArrays(arr1, arr2) {
+    let nArr=arr1.concat(arr2);
+    return nArr;
     /* Takes in two arrays of numbers and returns the two arrays combined into
     a single array. **Hint**: Use the `Array.concat` method but be aware that
     calling this method won't permanently change, also known as **mutate**,
@@ -46,6 +51,14 @@ function combineArrays(arr1, arr2) {
 };
 
 function wordWithinArray(word, arr) {
+    let eString=word.includes(arr);
+    if (eString==true) {
+        return true
+    }
+    else {
+        return false
+    }
+    }
     /* Takes in both a word and an array of words as arguments and returns a
     boolean that returns true if that string is located inside of the array, or
     false if it does not. Use `Array.indexOf`. */
@@ -53,6 +66,8 @@ function wordWithinArray(word, arr) {
 };
 
 function echo(str) {
+    let echostr=str.toUpperCase() + " ... " + str + " ... " + str.toLowerCase();
+    console.log(echostr);
     /* Takes in a string and returns that string "echo-ized". E.g.
     echo("Mom!"); // => returns "MOM! ... Mom! ... mom!"
     echo("hey"); // => returns "HEY ... hey ... hey"
@@ -61,17 +76,28 @@ function echo(str) {
 };
 
 function fizzBuzz(max) {
+    for (let i=0; i<max; i+=1) {
+        if (i % 3===0 && i %5 !==0) {
+            console.log(i);
+        }
+        else if (i %5===0 && i%3 !==0) {
+            console.log(i);
+        }
+    }
     /* Takes a number, max and returns an array that contains every number from
     0 to max (not inclusive) that is divisible by either 3 or 5, **but not both**. */
     // Your code here
 };
 
 function hello(name) {
+    console.log("Hello, " + name);
+
     /* Takes in a string name and returns a string saying "Hello, " to that name. */
     // Your code here
 };
 
 function goodbye(name) {
+    console.log("Bye, " + name);
     /* Takes in a string name and returns a string saying "Bye, " to that name. */
     // Your code here
 };
